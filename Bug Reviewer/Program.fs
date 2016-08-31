@@ -34,7 +34,7 @@ let main argv =
     for row in bugList.Rows |> Seq.tail do
         openURLInBrowser ("http://codebase.enjoy-digital.co.uk/projects/" + ticket + "/tickets/" + row.``#``.ToString())
         |> ignore
-        printfn "Ticket is a %s and is %s in urgancy" row.Type row.Priority
+        printfn "Ticket is a %s and is %s in urgancy.\n It's current status is %s" row.Type row.Priority row.Status
         System.Console.ReadLine()
         |> ignore
     0

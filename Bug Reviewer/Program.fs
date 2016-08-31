@@ -10,7 +10,7 @@ let openURLInBrowser (url:string) =
 
 
 let splitName (text:string) =
-    text.Split ([|"-All"|], System.StringSplitOptions.None)
+    text.Split ([|"-All";"-Back";"-Front";"-Design"|], System.StringSplitOptions.None)
     |> Seq.head 
 
 let removeSpaces (a:string) =
